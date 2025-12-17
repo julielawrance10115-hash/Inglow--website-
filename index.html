@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inglow | Serum Infused Soaps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffddd2, #fff5f1);
+      color: #3a2c2c;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(120deg, #f4a6a0, #f7c1b7);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    header p {
+      margin-top: 12px;
+      font-size: 18px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #f6b8a9;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 14px;
+      z-index: 100;
+    }
+    nav a {
+      margin: 8px 16px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #3a2c2c;
+    }
+    nav a:hover { border-bottom: 2px solid #c44536; }
+
+    section { max-width: 1100px; margin: auto; padding: 50px 20px; }
+
+    .card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 35px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 { font-family: 'Playfair Display', serif; color: #c44536; }
+
+    .hero-image { width: 100%; border-radius: 20px; margin-top: 20px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+
+    .product img { width: 100%; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+
+    .badge { background: #c44536; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 13px; display: inline-block; margin-top: 10px; }
+
+    button {
+      background: linear-gradient(120deg, #c44536, #e07a73);
+      color: white;
+      border: none;
+      padding: 14px 26px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover { opacity: 0.9; }
+
+    .review-box { display: none; background: #fff1ec; padding: 18px; border-radius: 14px; margin-top: 15px; }
+
+    input, textarea { width: 100%; padding: 14px; margin: 10px 0; border-radius: 12px; border: 1px solid #ccc; }
+
+    footer { background: linear-gradient(120deg, #f4a6a0, #f7c1b7); text-align: center; padding: 30px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Inglow</h1>
+  <p>Premium Serum Infused Soaps for Radiant Skin</p>
+  <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#ingredients">Ingredients</a>
+  <a href="#benefits">Benefits</a>
+  <a href="#manufacturing">Manufacturing</a>
+  <a href="#results">Results</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Customer Care</a>
+</nav>
+
+<section id="about">
+  <div class="card">
+    <h2>About Inglow</h2>
+    <p>Inglow combines luxury skincare serums with gentle cleansing bars, delivering spa-like results at home.</p>
+    <img src="https://images.unsplash.com/photo-1600185365483-26d7f7a4c4c9" class="hero-image">
+  </div>
+</section>
+
+<section id="products">
+  <div class="card">
+    <h2>Our Bestsellers</h2>
+    <div class="grid">
+      <div class="product"><img src="https://images.unsplash.com/photo-1615485737454-3f2f7c9f7c21"><p><b>Vitamin C Glow Bar</b></p><span class="badge">Brightening</span><br><button>Buy Now</button></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1615484478243-7e0f6a6b3c4b"><p><b>Hyaluronic Hydration Bar</b></p><span class="badge">Moisturizing</span><br><button>Buy Now</button></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1585386959984-a41552231693"><p><b>Rose Repair Serum Bar</b></p><span class="badge">Repair</span><br><button>Buy Now</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="ingredients">
+  <div class="card">
+    <h2>Key Ingredients</h2>
+    <ul>
+      <li>Vitamin C – Brightens & evens skin tone</li>
+      <li>Hyaluronic Acid – Deep hydration</li>
+      <li>Niacinamide – Repairs skin barrier</li>
+      <li>Rose Extract – Soothing & calming</li>
+    </ul>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="card">
+    <h2>Benefits</h2>
+    <ul>
+      <li>Luxury serum-based cleansing</li>
+      <li>Visible glow within weeks</li>
+      <li>Dermatologically tested</li>
+      <li>No harsh chemicals</li>
+    </ul>
+  </div>
+</section>
+
+<section id="manufacturing">
+  <div class="card">
+    <h2>Manufacturing Process</h2>
+    <p>Cold-processed in controlled environments to preserve serum potency and ensure quality.</p>
+  </div>
+</section>
+
+<section id="results">
+  <div class="card">
+    <h2>Real Results</h2>
+    <button onclick="showResult()">View Experience</button>
+    <div class="review-box" id="resultBox">✨ Softer, glowing skin in just 14 days ✨</div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="card">
+    <h2>Customer Reviews</h2>
+    <button onclick="toggleReviews()">Show Reviews</button>
+    <div class="review-box" id="reviewsBox">⭐⭐⭐⭐⭐ Luxury feel<br>⭐⭐⭐⭐ Hydrating<br>⭐⭐⭐⭐⭐ Highly recommended</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Customer Care</h2>
+    <p>Email: care@inglow.com</p>
+    <p>Phone: +91 90000 12345</p>
+    <input placeholder="Your Name"><textarea placeholder="Your Review"></textarea><button onclick="submitReview()">Submit</button>
+  </div>
+</section>
+
+<footer>© 2025 Inglow – Luxury Skincare</footer>
+
+<script>
+  function toggleReviews(){const r=document.getElementById('reviewsBox');r.style.display=r.style.display==='block'?'none':'block'}
+  function showResult(){document.getElementById('resultBox').style.display='block'}
+  function submitReview(){alert('Thank you for your feedback!')}
+</script>
+
+</body>
+</html>
+
+
+
