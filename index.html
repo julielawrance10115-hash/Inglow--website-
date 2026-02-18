@@ -66,19 +66,24 @@
 
     h2 { font-family: 'Playfair Display', serif; color: #c44536; }
 
-    .hero-image  {
+       
+.hero {
   width: 100%;
-  height: 400px;        /* controls banner height */
+  height: 400px;
   overflow: hidden;
 }
 
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover;    /* keeps image nicely fitted */
+  object-fit: cover;
   display: block;
 }
-
+    @media (max-width: 768px) {
+  .hero {
+    height: 250px;
+  }
+}
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
 
     .product img { width: 100%; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
@@ -129,7 +134,8 @@ button:hover {
   <div class="card">
     <h2>About Inglow Serum Infused Soaps</h2>
     <p>Inglow combines luxury skincare serums with gentle cleansing bars, delivering spa-like results at home.</p>
-    <img src="inglow-hero-banner.jpg" alt="Inglow serum infused soaps banner">
+  <section class="hero">
+  <img src="inglow-hero-banner.jpg" alt="Inglow serum infused soaps banner">
   </div>
 </section>
 
