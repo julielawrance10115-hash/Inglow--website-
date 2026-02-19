@@ -48,8 +48,14 @@
     }
     nav a:hover { border-bottom: 2px solid #c44536; }
 
-    section { max-width: 1100px; margin: auto; padding: 50px 20px; }
-
+    
+section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
     .card {
       background: #fff;
       border-radius: 22px;
@@ -78,11 +84,12 @@
   object-fit: contain;   /* ✅ shows full image */
   background: #fff5f1;
   object-position: center;
-  display: block;
+  display: block;}
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
-       
-.    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-
     .product img { width: 100%; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 
     .badge { background: #c44536; color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 13px; display: inline-block; margin-top: 10px; }
@@ -106,15 +113,21 @@ button:hover {
     input, textarea { width: 100%; padding: 14px; margin: 10px 0; border-radius: 12px; border: 1px solid #ccc; }
 
     footer { background: linear-gradient(120deg, #f4a6a0, #f7c1b7); text-align: center; padding: 30px; }
+    @media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    border-radius: 0;
+  }
+}
   </style>
 </head>
 <body>
 <h1>Inglow Serum Infused Soap for Glowing Skin</h1>
 <header>
 
- <p>Premium Serum Infused Soaps for Radiant Skin</p>
-  <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
-</header>
 <p>Premium Serum Infused Soaps for Radiant Skin</p>
   <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
 </header>
